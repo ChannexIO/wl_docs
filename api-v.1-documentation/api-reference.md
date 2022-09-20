@@ -1,5 +1,8 @@
 ---
 description: Documentation for {{APPLICATION_NAME}} HTTP JSON-based API version 1.0
+APPLICATION_DOMAIN: app.io
+APPLICATION_NAME: app_name
+STAGING_DOMAIN: staging.app.io
 ---
 
 # API Reference
