@@ -4,9 +4,7 @@ description: List of supported Channel Codes
 
 # Channel Codes
 
-{% hint style="info" %}
 To use codes when creating a new booking in {{APPLICATION_NAME}} please only use the long text. The short code is not used except to create our internal booking reference.
-{% endhint %}
 
 AAT - AA Travel
 

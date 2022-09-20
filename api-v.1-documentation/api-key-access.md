@@ -28,11 +28,10 @@ After that, you should see the next message:
 
 ![Generated API Key Interface](../.gitbook/assets/group.png)
 
-{% hint style="warning" %}
+### Warning
 Please, copy the API Key and keep it in a safe place.\
 API Key will only be shown once.\
 If you lose the API Key, you can generate a new one.
-{% endhint %}
 
 ## API Key Usage
 

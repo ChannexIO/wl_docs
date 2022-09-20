@@ -12,8 +12,7 @@ NOTE: At {{APPLICATION_NAME}} availability information is represented at two lev
 
 Get Availability and Restrictions data from Rate Plans.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -43,9 +42,8 @@ List of comma separated restrictions what you would like to load. Supported valu
 \- availability\_offset\
 \- max\_sell\
 \- max\_availability
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -89,9 +87,8 @@ Status Code: `200 OK`
 }
 
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Bad Request Error Response**
 
 Status Code: `400 Bad Request`
@@ -120,8 +117,6 @@ Status Code: `401 Unauthorized`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Returns
 
@@ -129,7 +124,7 @@ Status Code: `401 Unauthorized`
 Method can return a Success result with `200 OK` HTTP Code if operation is successful. Will contain a Restriction object in the answer.
 
 **Bad Request Error**\
-****Method can return a Bad Request Error result with `400 Bad Request` HTTP Code if user pass wrong arguments.
+Method can return a Bad Request Error result with `400 Bad Request` HTTP Code if user pass wrong arguments.
 
 **Unauthorised Error**\
 Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code if wrong Bearer Token provided.
@@ -152,8 +147,7 @@ Restriction Object is valid answer for Get Restrictions method. This object cont
 
 Get the Availability per Room Type
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -168,9 +162,8 @@ Query to get values for specific date:\
 `filter[date]=YYYY-MM-DD`\
 To get values for Date Range:\
 `filter[date][gte]=YYYY-MM-DD&filter[date][lte]=YYYY-MM-DD`
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 Success Response Example
 
 Status Code: 200 OK
@@ -193,9 +186,8 @@ Status Code: 200 OK
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Bad Request Error Response**
 
 Status Code: `400 Bad Request`
@@ -224,8 +216,6 @@ Status Code: `401 Unauthorized`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Returns
 
@@ -233,7 +223,7 @@ Status Code: `401 Unauthorized`
 Method can return a Success result with `200 OK` HTTP Code if operation was successful. Will contain an Availability object in the answer.
 
 **Bad Request Error**\
-****Method can return a Bad Request Error result with `400 Bad Request` HTTP Code if the user passes wrong arguments.
+Method can return a Bad Request Error result with `400 Bad Request` HTTP Code if the user passes wrong arguments.
 
 **Unauthorised Error**\
 Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code if wrong Bearer Token provided.
@@ -254,8 +244,7 @@ Availability Object is valid answer for Get Availability method. This object con
 
 Update Rate & Restrictions for specific Rate Plans and Dates.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -290,9 +279,8 @@ This method allow update multiple dates from single message.
   }]
 }
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -311,9 +299,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -381,8 +368,6 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Fields
 
@@ -400,12 +385,12 @@ String with date in ISO 8601 format by mask `YYYY-MM-DD`.\
 Past dates are not allowed.
 
 **date\_from `[required]` if date is not present**\
-****String with date in ISO 8601 format by mask `YYYY-MM-DD`.\
+String with date in ISO 8601 format by mask `YYYY-MM-DD`.\
 Start of applicable date range.\
 Past dates are not allowed.
 
 **date\_to `[required]` if date is not present**\
-****String with date in ISO 8601 format by mask `YYYY-MM-DD`.\
+String with date in ISO 8601 format by mask `YYYY-MM-DD`.\
 End of applicable date range.\
 Past dates are not allowed.
 
@@ -426,7 +411,7 @@ To update each Monday in specific date range, you can send next request:
 **rate `[optional]`**\
 String or Positive Integer value.\
 **The value should be greater than 0.**\
-****Our API allows 2 ways to pass the rate value:\
+Our API allows 2 ways to pass the rate value:\
 Decimal value converted into String ("200.00"), or Integer value with a minimum fraction size of currency (20000 for 200.00 USD).\
 Both of these ways allows you to work with Rates and prevents any problems with floating point operations.
 
@@ -468,7 +453,7 @@ Non-negative integer value.
 At least one restriction should be present on the request.
 
 **Last Win logic**\
-****All provided updates is processed in FIFO logic, as result, you can use overrides to minimize message size:
+All provided updates is processed in FIFO logic, as result, you can use overrides to minimize message size:
 
 ```javascript
 {
@@ -500,7 +485,7 @@ At least one restriction should be present on the request.
 Method can return a Success result with `200 OK` HTTP Code if the operation is successful. Will contain a meta object with message in the answer.
 
 **Validation errors**\
-****If your request contain wrong data, you will receive warning messages at answer. Please, keep in mind, this response will be marked at Success and will have header `200 OK`. It is happened, because one message can be rejected, but another will be successfully produced.\
+If your request contain wrong data, you will receive warning messages at answer. Please, keep in mind, this response will be marked at Success and will have header `200 OK`. It is happened, because one message can be rejected, but another will be successfully produced.\
 \
 **Unauthorised Error**\
 Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code if wrong Bearer Token provided.&#x20;
@@ -655,8 +640,7 @@ Example of warning message:
 
 Update Availability for a specific Room Type and Date.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -691,9 +675,8 @@ This method allow you to update several dates with one message.
   }]
 }
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -705,9 +688,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -720,8 +702,6 @@ Status Code: `401 Unauthorized`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 You can insert multiple dates and ranges into one API call
 
@@ -759,11 +739,11 @@ String with valid UUID of Room Type object.
 String with date in ISO 8601 format by mask `YYYY-MM-DD`.
 
 **date\_from `[required]` if date is not present**\
-****String with date in ISO 8601 format by mask `YYYY-MM-DD`.\
+String with date in ISO 8601 format by mask `YYYY-MM-DD`.\
 Start of applicable date range.
 
 **date\_to `[required]` if date is not present**\
-****String with date in ISO 8601 format by mask `YYYY-MM-DD`.\
+String with date in ISO 8601 format by mask `YYYY-MM-DD`.\
 End of applicable date range.
 
 **availability `[required]`**\
@@ -781,8 +761,7 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 Get Availability or / and Restrictions changes for Rate Plans.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -792,7 +771,7 @@ GET https://{{STAGING_DOMAIN}}/api/v1/restrictions/changes?timestamp=2019-05-06T
 Query require three get arguments:
 
 **timestamp**\
-****Last check timestamp. Can be a valid ISO 8601 date time string or UNIX timestamp. {{APPLICATION_NAME}} will return changes happened after that date.
+Last check timestamp. Can be a valid ISO 8601 date time string or UNIX timestamp. {{APPLICATION_NAME}} will return changes happened after that date.
 
 **property\_id**\
 Property ID what changes are you like to get.
@@ -813,9 +792,8 @@ List of comma separated restrictions what you would like to load. Supported valu
 \- max\_availability
 
 As optional argument, you can pass date filter to fetch changes for specific date or date range.
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -910,9 +888,8 @@ Status Code: `200 OK`
   ]
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Bad Request Error Response**
 
 Status Code: `400 Bad Request`
@@ -941,8 +918,6 @@ Status Code: `401 Unauthorized`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Returns
 
@@ -950,7 +925,7 @@ Status Code: `401 Unauthorized`
 Method can return a Success result with `200 OK` HTTP Code if the operation is successful. Will contain a Restriction object in the answer.
 
 **Bad Request Error**\
-****Method can return a Bad Request Error result with `400 Bad Request` HTTP Code if the user passed wrong arguments.
+Method can return a Bad Request Error result with `400 Bad Request` HTTP Code if the user passed wrong arguments.
 
 **Unauthorised Error**\
 Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code if the wrong Bearer Token was provided.

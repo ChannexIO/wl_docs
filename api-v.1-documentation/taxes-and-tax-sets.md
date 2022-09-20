@@ -16,16 +16,14 @@ Each property can have many Tax Sets and Taxes, but only one can be selected as 
 
 Retrieve list of Taxes associated with user.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/taxes
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -61,9 +59,7 @@ Status Code: `200 OK`
   ]
 }
 ```
-{% endtab %}
-
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -76,8 +72,7 @@ Status Code: `401 Unauthorized`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
 
 ### Returns
 
@@ -91,16 +86,14 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 Retrieve specific Tax associated with User by ID.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/taxes/:id
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -134,9 +127,7 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
-
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -162,8 +153,7 @@ Status Code: `404 Not Found`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
 
 ### Returns
 
@@ -180,8 +170,7 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 Create a new Tax.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -202,9 +191,8 @@ Query body (JSON):
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `201 Created`
@@ -238,9 +226,7 @@ Status Code: `201 Created`
   }
 }
 ```
-{% endtab %}
-
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -271,8 +257,7 @@ Status Code: `422 Unprocessable Entity`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
 
 ### Fields
 
@@ -320,8 +305,7 @@ Method can return a Validation Error result with `422 Unprocessable Entity` HTTP
 
 Update a Tax.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -337,9 +321,8 @@ Query body (JSON):
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -373,9 +356,7 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
-
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -419,8 +400,7 @@ Status Code: `422 Unprocessable Entity`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
 
 ### Returns
 
@@ -440,16 +420,14 @@ Method can return a Validation Error result with `422 Unprocessable Entity` HTTP
 
 Remove a Tax.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 DELETE https://{{STAGING_DOMAIN}}/api/v1/taxes/:id
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -461,9 +439,7 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
-
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -489,8 +465,7 @@ Status Code: `404 Not Found`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
 
 ### Returns
 
@@ -507,16 +482,14 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 Retrieve list of Tax Sets associated with user.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/tax_sets
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -574,9 +547,7 @@ Status Code: `200 OK`
   ]
 }
 ```
-{% endtab %}
-
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -589,8 +560,7 @@ Status Code: `401 Unauthorized`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
 
 ### Returns
 
@@ -604,16 +574,14 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 Retrieve specific Tax Set associated with User by ID.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/tax_sets/:id
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -669,9 +637,7 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
-
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -697,8 +663,7 @@ Status Code: `404 Not Found`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
 
 ### Returns
 
@@ -715,8 +680,7 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 Create a new Tax Set.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -738,9 +702,8 @@ Query body (JSON):
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `201 Created`
@@ -796,9 +759,7 @@ Status Code: `201 Created`
   }
 }
 ```
-{% endtab %}
-
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -829,8 +790,7 @@ Status Code: `422 Unprocessable Entity`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
 
 ### Fields
 
@@ -867,8 +827,7 @@ Method can return a Validation Error result with `422 Unprocessable Entity` HTTP
 
 Update a Tax Set.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -884,9 +843,8 @@ Query body (JSON):
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -942,9 +900,7 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
-
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -988,8 +944,7 @@ Status Code: `422 Unprocessable Entity`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
 
 ### Returns
 
@@ -1009,16 +964,14 @@ Method can return a Validation Error result with `422 Unprocessable Entity` HTTP
 
 Remove a Tax Set.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 DELETE https://{{STAGING_DOMAIN}}/api/v1/tax_sets/:id
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -1030,9 +983,7 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
-
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -1058,8 +1009,7 @@ Status Code: `404 Not Found`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
 
 ### Returns
 

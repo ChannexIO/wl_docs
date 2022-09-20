@@ -18,16 +18,14 @@ Each Property and Room Type can have they own list of Facilities.
 
 Method to get a list of Facilities.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/property_facilities
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -52,9 +50,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -67,8 +64,6 @@ Status Code: `401 Unauthorized`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Pagination
 
@@ -87,16 +82,14 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 Method to get list of all facility without additional details and pagination limits.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/property_facilities/options
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -116,9 +109,8 @@ Status Code: `200 OK`
   ]
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -131,23 +123,19 @@ Status Code: `401 Unauthorized`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ## Room Type Facilities List
 
 Method to get a list of Room Type Facilities.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/room_facilities
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -172,9 +160,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -187,8 +174,6 @@ Status Code: `401 Unauthorized`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Pagination
 
@@ -207,16 +192,14 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 Method to get list of all facility without additional details and pagination limits.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/room_facilities/options
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -236,5 +219,3 @@ Status Code: `200 OK`
   ]
 }
 ```
-{% endtab %}
-{% endtabs %}

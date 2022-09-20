@@ -22,15 +22,7 @@ We will cover the next key points:
 
 To get started you need to sign up to {{APPLICATION_NAME}} staging server and create a test property at {{STAGING_DOMAIN}}
 
-{% embed url="https://{{STAGING_DOMAIN}}" %}
-
-Once you have made your account you just need to make a test property, with some rooms and rates. You can find some help files on creating that here:
-
-{% embed url="https://docs.{{APPLICATION_DOMAIN}}/application-documentation/properties-and-groups-management\#add-a-new-property" %}
-
-{% embed url="https://docs.{{APPLICATION_DOMAIN}}/application-documentation/rooms-management\#create-a-room" %}
-
-
+Once you have made your account you just need to make a test property, with some rooms and rates. You can find some help files on creating that here.
 
 ### Channel / OTA Eligibility and Process
 
@@ -173,11 +165,10 @@ If your rate plan does not allow updates, but can be sold at 3rd party side, you
 
 Each time {{APPLICATION_NAME}} catches any changes at the property state associated with Rate Plans or Room Types mapped to your system, we will generate a changes message and send it to changes endpoint at your side via POST request.
 
-{% hint style="danger" %}
+### WARNING
 Min Stay Requirements
 
 Does your system accept Min Stay Arrival & Min Stay Through? If you only support one please get in touch with us for workaround.
-{% endhint %}
 
 We expect to see the POST endpoint protected by API Key authentication. Query will contain JSON message with changes.
 
@@ -366,13 +357,9 @@ To provide bookings from your side, you should send a POST request to the endpoi
 api-key: open_channel_api_key
 ```
 
-{% hint style="info" %}
 Our Open Channel use API Key `open_channel_api_key`, when you finish your implementation, we will provide API Key specific for your channel connection.
-{% endhint %}
 
-{% hint style="warning" %}
 Keep in mind, you should use `secure` domain name to push bookings to keep provided credit cards at our PCI Storage.
-{% endhint %}
 
 With next message structure:
 
@@ -550,9 +537,7 @@ Object without any specific structure where you can pass any additional informat
 
 Information about the Credit Card.
 
-{% hint style="warning" %}
 If you'd like to pass information about the credit card you must use `secure-{{STAGING_DOMAIN}}` or `secure.{{APPLICATION_DOMAIN}}` \(for production environment\) endpoints. Otherwise the credit card will be masked without ability to restore the original card.
-{% endhint %}
 
 **expiration\_date `[required]`**  
 String with Card Expiration date in `MM/YYYY` format.

@@ -206,16 +206,14 @@ Simple API to read and reply to reviews.
 
 ### Get Reviews List
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/reviews
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -297,9 +295,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -327,8 +324,6 @@ Status Code: `403 Forbidden`
 ```
 
 This error happened, when Property is not have installed Messages Application.
-{% endtab %}
-{% endtabs %}
 
 #### Returns
 
@@ -346,16 +341,14 @@ Method can return a Forbidden Error result with `403 Forbidden` HTTP Code if Pro
 
 ### **Get Review by ID**
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/reivews/:review_id
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -429,9 +422,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -472,8 +464,6 @@ Status Code: `404 Not Found`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 #### Returns
 
@@ -491,8 +481,7 @@ Method can return a Forbidden Error result with `403 Forbidden` HTTP Code if Pro
 
 ### Reply to Review
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -508,15 +497,13 @@ Payload:
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -542,8 +529,6 @@ Status Code: `404 Not Found`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 #### Returns
 
@@ -560,8 +545,7 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 Method specific only to Airbnb reviews.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -593,15 +577,13 @@ Payload:
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -627,8 +609,6 @@ Status Code: `404 Not Found`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 #### Returns
 
@@ -647,16 +627,14 @@ API to read Score per Property
 
 ### Get Property Score
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 POST https://{{STAGING_DOMAIN}}/api/v1/scores/:property_id
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -724,9 +702,8 @@ Status Code: `200 OK`
 }
 
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -752,8 +729,6 @@ Status Code: `404 Not Found`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 #### Returns
 
@@ -768,16 +743,14 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 ### Get Detailed Property Scores
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 POST https://{{STAGING_DOMAIN}}/api/v1/scores/:property_id/detailed
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -924,9 +897,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -952,8 +924,6 @@ Status Code: `404 Not Found`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 #### Returns
 

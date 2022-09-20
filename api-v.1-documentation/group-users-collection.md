@@ -10,16 +10,14 @@ description: API methods to work with Group Users
 
 Retrieve list of Group Users associated with a Group.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/group_users?filter[group_id]=GROUP_ID
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -57,9 +55,8 @@ Status Code: `200 OK`
   ]
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -72,8 +69,6 @@ Status Code: `401 Unauthorized`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Returns
 
@@ -87,8 +82,7 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 Create a new Group User. By inviting a User into a Group, you are automatically granting access for this user to all properties in the Group.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -107,9 +101,8 @@ Query body (JSON):
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `201 Created`
@@ -145,9 +138,8 @@ Status Code: `201 Created`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Bad Request Error Response**
 
 Status Code: `400 Bad Request`
@@ -205,8 +197,6 @@ Status Code: `422 Unprocessable Entity`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Fields
 
@@ -249,16 +239,14 @@ Method can return a Validation Error result with `422 Unprocessable Entity` HTTP
 
 Retrieve a Group User by ID.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/group_users/:id
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -294,9 +282,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Validation Error Response**
 
 Status Code: `401 Unauthorized`
@@ -322,8 +309,6 @@ Status Code: `403 Forbidden`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Returns
 
@@ -340,8 +325,7 @@ Method can return a Forbidden Error result with `403 Forbidden` HTTP Code if cur
 
 Update the Group User information.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -358,9 +342,8 @@ Query body (JSON):
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -396,9 +379,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -455,8 +437,6 @@ Status Code: `422 Unprocessable Entity`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Fields
 
@@ -483,16 +463,14 @@ Method can return a Validation Error result with `422 Unprocessable Entity` HTTP
 
 Revoke Group User access to a specific Group.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 DELETE https://{{STAGING_DOMAIN}}/api/v1/group_users/:id
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -504,9 +482,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Bad Request Error Response**
 
 Status Code: `400 Bad Request`
@@ -559,8 +536,6 @@ Status Code: `404 Not Found`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Returns
 

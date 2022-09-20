@@ -6,22 +6,16 @@ description: 'API Methods to get real time rates, availability and content from 
 
 These are API methods for META-like channel connections. If your application does not cache any information on your side about Properties, Availability and Restrictions, you can implement support for our Shopping API and use it to build your own Booking Engine or Meta Channel.
 
-{% hint style="info" %}
 This API is for real time shopping of {{APPLICATION_NAME}} API for all required details. Perfect for many applications as you don't need to cache anything on your side.
-{% endhint %}
 
-{% hint style="info" %}
 **Coming Soon**
 
 Get available properties method
 
 Provider API Key to protect channel
-{% endhint %}
 
-{% hint style="danger" %}
 **Experimental API**  
 These API methods are experimental and can be changed based at client feedback.
-{% endhint %}
 
 ## Properties List
 
@@ -81,9 +75,7 @@ This endpoint supports filters by `city`, `lat`, `lng` and `country`.
 To apply filter pass it as query argument:  
 `/property_list?filter[city]=Moscow`
 
-{% hint style="info" %}
 You can use our [Photo Transformations](./api-v.1-documentation/photos-collection#photo-transformations) to get photos fit to your design.
-{% endhint %}
 
 ## Get Property Info
 
@@ -380,9 +372,7 @@ Object without any specific structure where you can pass any additional informat
 
 Information about the Credit Card.
 
-{% hint style="warning" %}
 If you'd like to pass information about the credit card you must use `secure-{{STAGING_DOMAIN}}` or `secure.{{APPLICATION_DOMAIN}}` \(for production environment\) endpoints. Otherwise the credit card will be masked without ability to restore the original card.
-{% endhint %}
 
 **expiration\_date `[required]`**  
 String with Card Expiration date in `MM/YYYY` format.

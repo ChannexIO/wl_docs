@@ -10,16 +10,14 @@ description: API methods to work with Rate Plans
 
 Retrieve a list of Rate Plans associated with user Properties.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/rate_plans
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -81,9 +79,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -96,8 +93,6 @@ Status Code: `401 Unauthorized`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Pagination
 
@@ -116,16 +111,14 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 Method to get list of all room types associated with  the current account without additional details and pagination limits.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/rate_plans/options?filter[property_id]={property_id}
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -150,9 +143,8 @@ Status Code: `200 OK`
   ]
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -165,23 +157,19 @@ Status Code: `401 Unauthorized`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ## Get Rate Plan by ID
 
 Retrieve a specific Rate Plan by ID.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/rate_plans/:id
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -236,9 +224,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -264,8 +251,6 @@ Status Code: `404 Not Found`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Returns
 
@@ -282,12 +267,9 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 Create a new Rate Plan.
 
-{% hint style="info" %}
 All created rates will have default values set by {{APPLICATION_NAME}}. Rate = 0, Stop sell = Off, Min Stay = 1. After you create a rate please use the [Availability and Rates API](ari.md#update-rate-and-restrictions) to send values per day.
-{% endhint %}
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -328,9 +310,8 @@ Query body (JSON):
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `201 Created`
@@ -385,9 +366,8 @@ Status Code: `201 Created`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -418,8 +398,6 @@ Status Code: `422 Unprocessable Entity`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Fields
 
@@ -650,8 +628,7 @@ Method can return a Validation Error result with `422 Unprocessable Entity` HTTP
 
 Update a Rate Plan.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -692,9 +669,8 @@ Query body (JSON):
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -749,9 +725,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -795,8 +770,6 @@ Status Code: `422 Unprocessable Entity`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Fields
 
@@ -820,16 +793,14 @@ Method can return a Validation Error result with `422 Unprocessable Entity` HTTP
 
 Remove a Rate Plan.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 DELETE https://{{STAGING_DOMAIN}}/api/v1/rate_plans/:id
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -841,9 +812,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -869,8 +839,6 @@ Status Code: `404 Not Found`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Flags
 

@@ -12,16 +12,14 @@ Right now, Create Photo API doesn't support upload files, but we have this featu
 
 Retrieve list of Photos associated with user Properties.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/photos
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -47,9 +45,8 @@ Status Code: `200 OK`
   "meta": {}
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -62,8 +59,6 @@ Status Code: `401 Unauthorized`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Returns
 
@@ -77,16 +72,14 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 Retrieve specific Photo by ID.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/photos/:id
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -109,9 +102,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -137,8 +129,6 @@ Status Code: `404 Not Found`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Returns
 
@@ -155,8 +145,7 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 Create new Photo.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -178,9 +167,8 @@ Query body (JSON):
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `201 Created`
@@ -203,9 +191,8 @@ Status Code: `201 Created`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -236,8 +223,6 @@ Status Code: `422 Unprocessable Entity`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Fields
 
@@ -288,8 +273,7 @@ Method can return a Validation Error result with `422 Unprocessable Entity` HTTP
 
 Update Photo.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -311,9 +295,8 @@ Query body (JSON):
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -336,9 +319,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -382,8 +364,6 @@ Status Code: `422 Unprocessable Entity`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Fields
 
@@ -407,16 +387,14 @@ Method can return a Validation Error result with `422 Unprocessable Entity` HTTP
 
 Remove Photo.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 DELETE https://{{STAGING_DOMAIN}}/api/v1/photos/:id
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -428,9 +406,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -456,8 +433,6 @@ Status Code: `404 Not Found`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Returns
 

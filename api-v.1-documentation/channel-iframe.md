@@ -14,9 +14,7 @@ To generate a One-Time access token you should call the next API Method:
 POST {{server}}/api/v1/auth/one_time_token
 ```
 
-{% hint style="info" %}
 Please, don’t forget to add your Authorisation header.
-{% endhint %}
 
 You should get the following response:
 

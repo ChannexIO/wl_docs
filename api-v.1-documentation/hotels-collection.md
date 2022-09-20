@@ -6,24 +6,21 @@ description: API methods to work with Properties
 
 **Property** is a physical premises – hotels, motels, lodges, cabins, chalets, luxury apartments and other types of buildings. Usually each property has a unique address.
 
-{% hint style="info" %}
+### NOTE
 Don't combine multiple properties into one, it's better they are all created separately with their own address and details
-{% endhint %}
 
 ## Properties List
 
 Retrieve list of properties associated with user.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/properties
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -93,9 +90,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -108,8 +104,6 @@ Status Code: `401 Unauthorized`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Pagination and Filters
 
@@ -130,16 +124,14 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 Method to get list of all properties associated with current account without additional details and pagination limits.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/properties/options
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -159,9 +151,8 @@ Status Code: `200 OK`
   ]
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -174,15 +165,12 @@ Status Code: `401 Unauthorized`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ## Create Property
 
 Create a new Property.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -233,9 +221,8 @@ Query body (JSON):
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `201 Created`
@@ -307,9 +294,8 @@ Status Code: `201 Created`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -340,8 +326,6 @@ Status Code: `422 Unprocessable Entity`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Fields
 
@@ -512,16 +496,14 @@ Method can return a Validation Error result with `422 Unprocessable Entity` HTTP
 
 Retrieve specific property associated with User by ID.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/properties/:id
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -592,9 +574,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -607,8 +588,6 @@ Status Code: `401 Unauthorized`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Returns
 
@@ -622,8 +601,7 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 Update property information.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -662,9 +640,8 @@ Query body (JSON):
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -736,9 +713,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -769,8 +745,6 @@ Status Code: `422 Unprocessable Entity`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Fields
 

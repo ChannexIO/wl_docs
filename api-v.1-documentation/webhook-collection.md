@@ -53,16 +53,14 @@ Airbnb specific, You can see a alteration request and can accept or deny
 
 Retrieve a list of Webhooks associated with users Properties.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/webhooks
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -99,9 +97,7 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
-
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -114,8 +110,7 @@ Status Code: `401 Unauthorized`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
 
 ### Pagination
 
@@ -134,16 +129,14 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 Retrieve specific webhook associated with User by ID.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/webhooks/:id
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -173,9 +166,7 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
-
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -201,8 +192,7 @@ Status Code: `404 Not Found`
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
 
 ### Returns
 
@@ -219,8 +209,7 @@ Method can return a Not Found Error result with `404 Not Found` HTTP Code if Web
 
 Create a new Webhook.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -242,9 +231,8 @@ Query body (JSON):
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `201 Created`
@@ -274,9 +262,7 @@ Status Code: `201 Created`
   }
 }
 ```
-{% endtab %}
-
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -307,8 +293,7 @@ Status Code: `422 Unprocessable Entity`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
 
 ### Fields
 
@@ -367,8 +352,7 @@ Method can return a Validation Error result with `422 Unprocessable Entity` HTTP
 
 Update a Webhook.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -390,9 +374,8 @@ Query body (JSON):
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -421,9 +404,7 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
-
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -467,8 +448,7 @@ Status Code: `422 Unprocessable Entity`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
 
 ### Fields
 
@@ -492,16 +472,14 @@ Method can return a Validation Error result with `422 Unprocessable Entity` HTTP
 
 Remove a Webhook.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 DELETE https://{{STAGING_DOMAIN}}/api/v1/webhooks/:id
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -513,9 +491,7 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
-
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -541,8 +517,7 @@ Status Code: `404 Not Found`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
 
 ### Returns
 
@@ -561,8 +536,7 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 Test a Webhook by sending test query to your endpoint.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -584,9 +558,8 @@ Query body (JSON):
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Response" %}
+### Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -597,8 +570,7 @@ Status Code: `200 OK`
   "body": "{\n  \"success\": true\n}"
 }
 ```
-{% endtab %}
-{% endtabs %}
+
 
 ### Returns
 
@@ -781,9 +753,7 @@ Where BOOKING\_MESSAGE is structure equal to regular Booking Revision structure.
 
 Before you start any integration with webhooks, you should to know -
 
-{% hint style="warning" %}
 Sequence of incoming webhook calls can be different from sequence of events which trigger that calls. Webhooks may come out of order.
-{% endhint %}
 
 **Explanation**
 

@@ -8,9 +8,8 @@ At {{APPLICATION_NAME}} you are able to work with `Channel Messages`, it is an u
 
 The messages API has 2 parts - Booking Messages and Message Thread.
 
-{% hint style="info" %}
+### NOTE
 If you would like a quick start you can use the iframe feature to insert our chat interface into your PMS.
-{% endhint %}
 
 ## Enable chat on the Property
 
@@ -84,16 +83,14 @@ Simple API to send and read messages at the Booking level.
 
 ### Get Messages per Booking
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/bookings/:booking_id/messages
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -130,9 +127,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -175,8 +171,6 @@ Status Code: `422 Unprocessable Entity`
 ```
 
 This error happened, when Property connected to Messages Application, but original Booking OTA is not support Message API.
-{% endtab %}
-{% endtabs %}
 
 #### Returns
 
@@ -197,8 +191,7 @@ Method can return a Forbidden Error result with `403 Forbidden` HTTP Code if Pro
 
 ### Send Message to Booking
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -214,9 +207,8 @@ Payload:
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -250,9 +242,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -295,8 +286,6 @@ Status Code: `422 Unprocessable Entity`
 ```
 
 This error happened, when Property connected to Messages Application, but original Booking OTA is not support Message API.
-{% endtab %}
-{% endtabs %}
 
 #### Returns
 
@@ -321,16 +310,14 @@ API methods to work with Message Threads.
 
 ### Get Message Threads
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/message_threads
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -387,9 +374,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -417,8 +403,6 @@ Status Code: `403 Forbidden`
 ```
 
 This error happened, when Property is not have installed Messages Application.
-{% endtab %}
-{% endtabs %}
 
 #### Returns
 
@@ -433,16 +417,14 @@ Method can return a Forbidden Error result with `403 Forbidden` HTTP Code if Pro
 
 ### Get Message Thread by ID
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/message_threads/:id
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -490,9 +472,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -520,8 +501,6 @@ Status Code: `403 Forbidden`
 ```
 
 This error happened, when Property is not have installed Messages Application.
-{% endtab %}
-{% endtabs %}
 
 #### Returns
 
@@ -536,16 +515,14 @@ Method can return a Forbidden Error result with `403 Forbidden` HTTP Code if Pro
 
 ### Get Message for Message Thread
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/message_threads/:id/messages
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -607,9 +584,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -637,8 +613,6 @@ Status Code: `403 Forbidden`
 ```
 
 This error happened, when Property is not have installed Messages Application.
-{% endtab %}
-{% endtabs %}
 
 #### Returns
 
@@ -653,8 +627,7 @@ Method can return a Forbidden Error result with `403 Forbidden` HTTP Code if Pro
 
 ### Send Message to Message Thread
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -670,9 +643,8 @@ Payload:
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -706,9 +678,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -734,8 +705,6 @@ Status Code: `404 Not Found`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 #### Returns
 
@@ -750,16 +719,14 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 ### Close Message Thread
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 POST https://{{STAGING_DOMAIN}}/api/v1/message_threads/:id/close
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -807,9 +774,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -835,8 +801,6 @@ Status Code: `404 Not Found`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 #### Returns
 

@@ -248,9 +248,8 @@ Total price of tax
 
 ## Notes about Guarantee details
 
-{% hint style="danger" %}
+### Warning
 {{APPLICATION_NAME}} returns and receives information about Credit Card only to / from certified PCI DSS partners.
-{% endhint %}
 
 Following PCI DSS rules and security standards at industry, {{APPLICATION_NAME}} pass PCI DSS certification and handle Credit Card information at secure mode.
 
@@ -262,16 +261,14 @@ Before you start use secure endpoint, please contact with us through [{{SUPPORT_
 
 Retrieve list of Bookings associated with User Channels.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/bookings
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -363,9 +360,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -378,8 +374,6 @@ Status Code: `401 Unauthorized`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Pagination and Filters
 
@@ -388,25 +382,20 @@ Information about the count of entities and current pagination position containe
 
 #### Filter Examples
 
-{% tabs %}
-{% tab title="Filter By Arrival Date" %}
+### Filter By Arrival Date
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/bookings?filter[arrival_date][gte]=2021-01-01&filter[arrival_date][lte]=2021-02-01
 ```
-{% endtab %}
 
-{% tab title="Filter By Departure Date" %}
+### Filter By Departure Date
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/bookings?filter[departure_date][gte]=2021-01-01&filter[departure_date][lte]=2021-02-01
 ```
-{% endtab %}
 
-{% tab title="Filter By Booking Date" %}
+### Filter By Booking Date
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/bookings?filter[inserted_at][gte]=2021-01-01T00:00:00&filter[inserted_at][lte]=2021-02-01T00:00:00
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Returns
 
@@ -420,16 +409,14 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 Retrieve specific Booking by ID. The response will be the latest booking revision details.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/bookings/:id
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -508,9 +495,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -536,8 +522,6 @@ Status Code: `404 Not Found`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Returns
 
@@ -554,16 +538,14 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 Retrieve list of Booking Revisions associated with User Channels.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/booking_revisions
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -651,9 +633,8 @@ Status Code: `200 OK`
   ]
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -666,8 +647,6 @@ Status Code: `401 Unauthorized`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Returns
 
@@ -681,24 +660,20 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 Retrieve a list of not acknowledged booking revisions associated with User Channels.
 
-{% hint style="info" %}
+### NOTE
 When you successfully get a booking via this method make sure you [acknowledge the booking](bookings-collection.md#acknowledge-booking-revision-receiving). Once you have acknowledged a booking this booking revision will not be provided in the feed again.
-{% endhint %}
 
-{% hint style="danger" %}
+### WARNING
 PMS is expected to Ack all bookings from {{APPLICATION_NAME}}. To not ack bookings for any reason will mean the booking will be consistently provided in all feed calls.
-{% endhint %}
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/booking_revisions/feed
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -786,9 +761,8 @@ Status Code: `200 OK`
   ]
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -801,28 +775,22 @@ Status Code: `401 Unauthorized`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Note
 
 If all Booking Revision is acknowledged this request will return an empty result.
 
-{% hint style="info" %}
 If you want to get feed for a certain property you can use a filter:&#x20;
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/booking_revisions/feed?filter[property_id]=PROPERTY_ID
 
 ```
-{% endhint %}
 
-{% hint style="info" %}
 You can order the revisions received from feed endpoint by the oldest first.
 
 GET https://{{STAGING_DOMAIN}}/api/v1/booking\_revisions/feed?order\[inserted\_at]=asc\
 
-{% endhint %}
 
 ### Returns
 
@@ -836,16 +804,14 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 Retrieve specific Booking Revision by ID.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/booking_revisions/:id
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -926,9 +892,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -954,8 +919,6 @@ Status Code: `404 Not Found`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Returns
 
@@ -972,16 +935,14 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 Confirm receiving Booking Revision by creating an Acknowledge record.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 POST https://{{STAGING_DOMAIN}}/api/v1/booking_revisions/:id/ack
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -993,9 +954,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -1021,8 +981,6 @@ Status Code: `404 Not Found`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Returns
 
@@ -1040,16 +998,14 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 Remove Acknowledge record from specific revision and expose Booking Revision for `feed` endpoint.\
 This method allow to receive Booking Revision again.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 POST https://{{STAGING_DOMAIN}}/api/v1/booking_revisions/:id/resend
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -1061,9 +1017,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -1089,8 +1044,6 @@ Status Code: `404 Not Found`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Returns
 
@@ -1107,17 +1060,14 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 API to push Booking into {{APPLICATION_NAME}}.
 
-{% hint style="warning" %}
+### Warning
 Before create booking through API, you should create Booking Engine Channel at Channel Management screen of application. Then use created Channel ID as channel\_id at new booking message.
-{% endhint %}
 
-{% hint style="warning" %}
+### Warning
 Credit Card information can be provided into application only through secure endpoint (`secure-{{STAGING_DOMAIN}}`). If you try to push real credit card data into insecure endpoint, data will be masked and you can't use it in future processes.\
 Please, contact with us through [{{SUPPORT_EMAIL}}](mailto:{{SUPPORT_EMAIL}}) to get details.
-{% endhint %}
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -1156,9 +1106,8 @@ Query body (JSON):
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -1221,9 +1170,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -1249,8 +1197,6 @@ Status Code: `404 Not Found`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Returns
 
@@ -1267,8 +1213,7 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 ### Booking.com examples
 
-{% tabs %}
-{% tab title="New Booking" %}
+### New Booking
 ```javascript
 {
   "data": {
@@ -1415,9 +1360,8 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Booking Modification" %}
+### Booking Modification
 ```javascript
 {
   "data": {
@@ -1564,9 +1508,8 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Booking Cancellation" %}
+### Booking Cancellation
 ```javascript
 {
   "data": {
@@ -1724,13 +1667,10 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Airbnb examples
 
-{% tabs %}
-{% tab title="New Booking" %}
+### New Booking
 ```javascript
 {
   "data": {
@@ -1798,9 +1738,8 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Cancelled Booking" %}
+### Cancelled Booking
 ```javascript
 {
   "data": {
@@ -1868,13 +1807,10 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Expedia examples
 
-{% tabs %}
-{% tab title="New Booking" %}
+### New Booking
 ```javascript
 {
   "data": {
@@ -1949,9 +1885,8 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Cancelled Booking" %}
+### Cancelled Booking
 ```javascript
 {
   "data": {
@@ -2026,8 +1961,6 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ## Reporting API
 
@@ -2040,8 +1973,7 @@ You can mark a reservation as a no-show from 00:00 (midnight, in property's loca
 * the status of the reservation allows modifications;
 * the reservation isn't overbooked.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -2059,9 +1991,8 @@ Payload:
 ```
 
 `waived_fees` specifies whether the property will waive the [no-show](https://connect.booking.com/user\_guide/site/en-US/reporting-api/b\_xml-reporting/#report-guest-no-show) fees. Can be `true` or `false`
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 Status Code: `200 OK`
 
 ```javascript
@@ -2071,9 +2002,7 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
-
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -2112,15 +2041,12 @@ Status Code: `422 Unprocessable Entity`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Invalid Card Report API
 
 An invalid credit card can be reported immediately after the reservation is made, up until midnight (00:00) on the day of check-in, in the property's local timezone.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -2128,9 +2054,8 @@ POST https://{{STAGING_DOMAIN}}/api/v1/bookings/:booking_id/invalid_card
 ```
 
 Payload should be empty.
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 Status Code: `200 OK`
 
 ```javascript
@@ -2140,9 +2065,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -2181,8 +2105,6 @@ Status Code: `422 Unprocessable Entity`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Cancel Due Invalid Card Report API
 
@@ -2196,8 +2118,7 @@ A property may cancel a reservation if the guest's credit card details are inval
 
 **- For last-minute bookings of 10 or more room nights,** partners can cancel 2 hours after marking the credit as invalid.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -2205,9 +2126,8 @@ POST https://{{STAGING_DOMAIN}}/api/v1/bookings/:booking_id/cancel_due_invalid_c
 ```
 
 Payload should be empty.
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 Status Code: `200 OK`
 
 ```javascript
@@ -2217,9 +2137,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -2258,5 +2177,3 @@ Status Code: `422 Unprocessable Entity`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}

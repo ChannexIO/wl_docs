@@ -6,24 +6,20 @@ description: API methods to work with Room Types
 
 **Room Type** is an entity to represent accommodation inventory at your properties. Your villa, room or bed at a dormitory can be represented as a Room Type.
 
-{% hint style="info" %}
 If your property uses rooms instead of the traditional room type then just create a room type for each room. If you have vacation rentals you need to make a room type for the property since creating a property alone is not enough.
-{% endhint %}
 
 ## Room Types List
 
 Retrieve a list of Room Types associated with user Properties.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/room_types
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -80,9 +76,8 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -95,8 +90,6 @@ Status Code: `401 Unauthorized`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Pagination
 
@@ -105,11 +98,9 @@ Information about count of entities and current pagination position contained at
 
 ### Filter
 
-{% hint style="info" %}
 You can use a filter to retrieve Room Types for a specific property:&#x20;
 
 `GET https://{{STAGING_DOMAIN}}/api/v1/room_types?filter[property_id]=PROPERTY_ID`
-{% endhint %}
 
 ###
 
@@ -125,16 +116,14 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 Method to get a list of all room types associated with current account without additional details and pagination limits.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/room_types/options
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -155,9 +144,7 @@ Status Code: `200 OK`
   ]
 }
 ```
-{% endtab %}
-
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -170,23 +157,20 @@ Status Code: `401 Unauthorized`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
 
 ## Get Room Type by ID
 
 Retrieve specific Room Types by ID.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 GET https://{{STAGING_DOMAIN}}/api/v1/room_types/:id
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -236,9 +220,7 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
-
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -264,8 +246,7 @@ Status Code: `404 Not Found`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
 
 ### Returns
 
@@ -282,12 +263,9 @@ Method can return a Unauthorised Error result with `401 Unauthorized` HTTP Code 
 
 Create a new Room Type.
 
-{% hint style="info" %}
 Availability of all rooms created will be 0, to set availability you will need to use the [Availability and Rates API](ari.md#update-availability)
-{% endhint %}
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -324,9 +302,8 @@ Query body (JSON):
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `201 Created`
@@ -376,9 +353,7 @@ Status Code: `201 Created`
   }
 }
 ```
-{% endtab %}
-
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -409,8 +384,7 @@ Status Code: `422 Unprocessable Entity`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
 
 ### Fields
 
@@ -488,8 +462,7 @@ Method can return a Validation Error result with `422 Unprocessable Entity` HTTP
 
 Update a Room Type.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
@@ -523,9 +496,8 @@ Query body (JSON):
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -575,9 +547,7 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
-
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -621,8 +591,7 @@ Status Code: `422 Unprocessable Entity`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
 
 ### Fields
 
@@ -646,16 +615,14 @@ Method can return a Validation Error result with `422 Unprocessable Entity` HTTP
 
 Remove a Room Type.
 
-{% tabs %}
-{% tab title="Request" %}
+### Request
 Request:
 
 ```
 DELETE https://{{STAGING_DOMAIN}}/api/v1/room_types/:id
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
+### Success Response
 **Success Response Example**
 
 Status Code: `200 OK`
@@ -667,9 +634,7 @@ Status Code: `200 OK`
   }
 }
 ```
-{% endtab %}
-
-{% tab title="Error Response" %}
+### Error Response
 **Unauthorised Error Response**
 
 Status Code: `401 Unauthorized`
@@ -695,8 +660,7 @@ Status Code: `404 Not Found`
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
 
 ### Flags
 
